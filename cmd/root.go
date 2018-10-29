@@ -34,7 +34,7 @@ var cfgFile string
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "whcli",
-	Short: "A convenient command line tool for wormhole system.",
+	Short: "A convenient command line tool for wormhole system",
 	Long: `whcli is a CLI library for wormhole system based on bitcoin-cash, and the functions
 includes generating and parsing bitcoin-cash address, decoding transaction according
 to wormhole protocol. This project is under active developed, so many new feature 
