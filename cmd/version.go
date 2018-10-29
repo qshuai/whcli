@@ -17,6 +17,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/qshuai/tcolor"
 	"github.com/spf13/cobra"
 )
 
@@ -33,8 +34,8 @@ var versionCmd = &cobra.Command{
 the corresponding wormhole. It is not guaranteed for whcli result if 
 the wormhole version is not matched.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("whcli version:", whcliVersion)
-		fmt.Println("wormhole version:", wormholeVersion)
+		fmt.Println("whcli version:   ", tcolor.WithColor(tcolor.Green, whcliVersion))
+		fmt.Println("wormhole version:", tcolor.WithColor(tcolor.Green, wormholeVersion))
 	},
 }
 
