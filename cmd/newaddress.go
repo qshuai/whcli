@@ -28,6 +28,7 @@ import (
 // newaddressCmd represents the newaddress command
 var newaddressCmd = &cobra.Command{
 	Use:   "newaddress mainnet/testnet/regtest",
+	Args:  cobra.MinimumNArgs(1),
 	Short: "Generate a new address based on system random seed",
 	Long: `Generate a safe bitcoin cash address(including base58 and bech32 encoded
 format).
