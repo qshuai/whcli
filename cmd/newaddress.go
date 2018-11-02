@@ -48,12 +48,6 @@ var net = map[string]*chaincfg.Params{
 }
 
 func getNewAddress(args []string) {
-	if len(args) != 1 {
-		fmt.Println(tcolor.WithColor(tcolor.Red, "Usage: addr mainnet/testnet/regtest"))
-		return
-	}
-
-	var n *chaincfg.Params
 	n, ok := net[strings.ToLower(args[0])]
 	if !ok {
 		fmt.Println(tcolor.WithColor(tcolor.Red, args[0]+" not existed, should select from mainnet/testnet/regtest"))
